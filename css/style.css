@@ -333,18 +333,18 @@ body {
     margin-bottom: 10px;
 }
 
-.text-wrap p {
+.container-two .text-wrap p {
     color: #545459;
     font-weight: 400;
     line-height: 24px;
     transition: all .5s;
 }
-.container-two .view-all{
+.view-all{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 50px;
 }
 .container-two .view-all a{
     font-size: 16px;
@@ -528,10 +528,18 @@ body {
 }
 
 /* container-six */
-.container-six{
-    position: relative;
-    margin: 80px 150px;
-    background: white;
+
+.container-six {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 0 50px 0;
+}
+
+/* Tiêu đề "Tin tức" */
+.six-text {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
 }
 
 .container-six .text-left p{
@@ -547,38 +555,86 @@ body {
     -webkit-text-fill-color: transparent;
 
 }
-.container-six .six-one{
-    display:flex;
+
+/* Wrapper cho bài viết */
+.article-wrap {
+    display: flex;
     gap: 20px;
-    flex-wrap: wrap;
 }
-.six-left{
-    flex: 1 1 300px;
+
+/* Phần bên trái (hình ảnh lớn) */
+.article-left {
+    flex: 1;
+}
+
+.article-left img {
+    width: 600px;
+    height: 504px;
     border-radius: 6px;
-    overflow: hidden;
 }
-.six-left img{
-    display: block;
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-}
-.six-right{
-    flex: 1 1 600px;
+
+/* Phần bên phải (danh sách bài viết) */
+.six-right {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap:16px;
 }
-.article{
+
+/* Mỗi bài viết */
+.article {
     display: flex;
-    gap: 15px;
-    background-color: #1F2732;
-    border: 1px solid #eee;
-    border-radius: 6px;
-    overflow: hidden;
     text-decoration: none;
-    color: inherit;
+    gap: 15px;
+    color: #333;
 }
+
+.article img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin-top: -10px;
+    border-radius: 4px;
+}
+
+.text-wrap {
+    flex: 1;
+}
+.text-wrap{
+    margin-top: -20px;
+    padding: 29px 10px 20px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px;
+    line-height: 1.8;
+}
+
+.max-2-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 2; /* Thuộc tính chuẩn trong tương lai, hiện đã được một số trình duyệt hỗ trợ */
+    display: -moz-box; /* Hỗ trợ Firefox (cũ) */
+    -moz-box-orient: vertical; /* Hỗ trợ Firefox (cũ) */
+}
+.content {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 5px;
+    line-height: 1.5;
+}
+
+.post-date {
+    font-size: 16px;
+    color: #999;
+}
+
+
 
 /* container-seven */
 .container-seven{
