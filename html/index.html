@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stat_minus_1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Lb2T6vFbLheYBjTVMTRlRv9S0N+HWr/knblbdQ3bO4T2QRSWOTSEs7VBIeCr+z3h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<ht>
+
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-page">
+                <img src ='../img/logo.d392dd55a2bcc5d1.svg' alt="logo-page">
+            </div>
+            <div class="header-menu">
+                <ul>
+                    <li><a href="#trang-chu">Trang chủ</a></li>
+                    <li><a href="#ve-chung-toi">Về chúng tôi <i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="#dich-vu">Dịch vụ <i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="#tin-tuc">Tin tức</a></li>
+                    <li><a href="#lien-he">Liên hệ</a></li>
+                    <li><a href="#tuyen-dung">Tuyển dụng</a></li>
+                    <li><a href="#lich-su-kham">Lịch sử khám</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="button">
+                <div class="button--book">
+                    <button class = "btn--book">Đặt lịch khám</button>
+                </div>
+                <div class="button--login">
+                    <button class = "btn--login">Đăng nhập</button>
+                </div>
+            </div>
+            <div class="language-switcher">
+                <a href="#" onclick="changeLanguage('en')">ENG</a> |
+                <a href="#" onclick="changeLanguage('vi')">VIE</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <div class="container-one">
+        <div class="one-left">
+            <div class="one-left--text">
+                <div class="h1--text">
+                    <h1 class="text">Hệ thống thú y <span>Pet5H</span><br>
+                        Vì sức khỏe và hạnh phúc <br>của thú cưng
+                    </h1>
+                    <p>Ra đời với sứ mệnh "Vì sức khỏe và hạnh phúc thú cưng", Pet5H hướng đến trở thành chuỗi hệ thống bệnh viện, Bệnh viện thú y uy tín, được tin tưởng top đầu tại Việt Nam và xa hơn nữa là trong khu vực,...</p>
+                    <button class="btn--add">Xem thêm</button>
+                </div>
+            </div>
+        </div>
+        <div class="one-right">
+            <div class="one-right--img">
+                <img src = "../img/fixed_banner_large.png" alt="banner_large">
+                <div class="img--small">
+                    <img src = "../img/fixed_banner_small.png" alt="banner_small">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="home-item">
+        <div class="separate-line">
+        </div>
+    </div>
+
+    <div class="container-two">
+        <div class="text-center">
+            <p class="text-dichvu">Dịch vụ tại Pet5H</p>
+            <div class="underline"></div>
+            <p calss="text-des">Đồng hành cùng bạn chăm sóc, bảo vệ và điều trị cho thú cưng</p>
+        </div>
+        <div class="row">
+            <div class="each-service col-12 col-md-6 col-lg-4">
+                <div class="card p-3 shadow-sm">
+                    <div class="service-item">
+                        <img src ="../img/chamsosuckhoe.png" alt="Chăm sóc sức khoẻ">
+                        <div class="text-wrap">
+                            <h2 class="over-3-dots">CHĂM SÓC SỨC KHỎE</h2>
+                            <p class="max-3-lines summary">
+                                CHĂM SÓC SỨC KHOẺ THÚ CƯNG TỪ TÌNH YÊU VÀ TRÁI TIM Chăm sóc sức
+                                khỏe thú cưng không chỉ đơn thuần là một trách nhiệm mà còn là
+                                một biểu hiện của tình yêu và lòng tận tâm của chủ nuôi đối với 
+                                những người bạn nhỏ bé này. Tại Pet5H, chúng tôi hiểu rằng mỗi
+                                thú cưng đều là một thành viên quý báu trong gia đình, và vì
+                                vậy, việc chăm sóc sức khỏe cho chúng cần phải được thực hiện 
+                                một cách chu đáo, to...
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="each-service col-12 col-md-6 col-lg-4">
+                <div class="card p-3 shadow-sm">
+                    <div class="service-item">
+                        <img src ="../img/tamsoatbenh.png" alt="Chăm sóc sức khoẻ">
+                        <div class="text-wrap">
+                            <h2 class="over-3-dots">TẦM SOÁT BỆNH</h2>
+                            <p class="max-3-lines summary">
+                                TẦM SOÁT BỆNH THÚ Y CHUYÊN NGHIỆP, KỊP THỜI Để thú cưng luôn 
+                                khỏe mạnh, đảm bảo sức khỏe tốt nhất thì việc tầm soát bệnh định 
+                                kỳ là điều vô cùng quan trọng. Phòng khám thú y Pet5H tự hào 
+                                mang đến các dịch vụ tầm soát bệnh chuyên nghiệp giúp phát hiện 
+                                và điều trị kịp thời các vấn đề sức khỏe cho bé cưng. Hãy cùng 
+                                chúng tôi tìm hiểu qua bài viết sau đây! Tầm soát bệnh thú y là 
+                                gì? Tầm soát ...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="each-service col-12 col-md-6 col-lg-4">
+                <div class="card p-3 shadow-sm">
+                    <div class="service-item">
+                        <img src ="../img/khamtainha.png" alt="Chăm sóc sức khoẻ">
+                        <div class="text-wrap">
+                            <h2 class="over-3-dots">KHÁM CHỮA BỆNH TẠI NHÀ</h2>
+                            <p class="max-3-lines summary">
+                                Khám chữa bệnh tại nhà Chăm sóc sức khỏe cho thú cưng luôn là
+                                một trong những ưu tiên hàng đầu, đặc biệt khi các bé gặp vấn đề 
+                                sức khỏe. Tuy nhiên không phải lúc nào chúng ta cũng có thời 
+                                gian và điều kiện để đưa thú cưng đến phòng khám thú y. Việc này 
+                                có thể ít nhiều gây ảnh hưởng trực tiếp đến sức khỏe của các 
+                                bé.&nbsp; Hiểu được nhu cầu này, dịch vụ khám chữa bệnh tại nhà 
+                                của Pet5H ra đời nhằm...
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="each-service col-12 col-md-6 col-lg-4">
+                <div class="card p-3 shadow-sm">
+                    <div class="service-item">
+                        <img src ="../img/tiemphong.jpg" alt="Chăm sóc sức khoẻ">
+                        <div class="text-wrap">
+                            <h2 class="over-3-dots">TIÊM PHÒNG VACCINE</h2>
+                            <p class="max-3-lines summary">
+                                Tiêm phòng Vaccine Để thú cưng luôn khỏe mạnh và phát triển 
+                                toàn diện thì việc tiêm phòng vaccine là bước không thể bỏ qua. 
+                                Điều này giúp bé cưng đạt được trạng thái sức khỏe tốt nhất, 
+                                giảm thiểu rủi ro và phòng tránh mọi nguy cơ mắc bệnh.&nbsp; Hãy 
+                                cùng Pet5H tìm hiểu kỹ lưỡng dịch vụ tiêm phòng vaccine cho thú 
+                                cưng của bạn một cách tốt nhất nhé! Tại sao cần tiêm phòng 
+                                vaccine cho thú cưng? ...
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="each-service col-12 col-md-6 col-lg-4">
+                <div class="card p-3 shadow-sm">
+                    <div class="service-item">
+                        <img src ="../imG/xetnghiem.png" alt="Chăm sóc sức khoẻ">
+                        <div class="text-wrap">
+                            <h2 class="over-3-dots">XÉT NGHIỆM - CHẨN ĐOÁN HÌNH ẢNH</h2>
+                            <p class="max-3-lines summary">
+                                Xét nghiệm - chẩn đoán hình ảnh Với những người yêu thú cưng 
+                                thì các bé là một phần không thể thiếu trong cuộc sống, như 
+                                người bạn trung thành, người đồng hành đáng yêu, thậm chí là một 
+                                “thành viên gia đình” thực sự. Do vậy việc chăm sóc sức khỏe cho 
+                                thú cưng không chỉ là trách nhiệm mà còn là tình yêu thương, sự 
+                                quan tâm dành cho các bé. Trong số các phương pháp kiểm tra sức 
+                                khỏe, xét nghiệ...
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="each-service col-12 col-md-6 col-lg-4">
+                <div class="card p-3 shadow-sm">
+                    <div class="service-item">
+                        <img src ="../img/trietsan.jpg" alt="Chăm sóc sức khoẻ">
+                        <div class="text-wrap">
+                            <h2 class="over-3-dots">TRIỆT SẢN</h2>
+                            <p class="max-3-lines summary">
+                                Triệt sản thú cưng an toàn, nhanh chóng, không đau Khi xã hội
+                                ngày càng phát triển, việc nuôi thú cưng càng tăng cao. Theo đó 
+                                trước những nhu cầu về kiểm soát số lượng giống loài, triệt sản 
+                                là dịch vụ bạn cần quan tâm bởi đây là một quyết định quan trọng 
+                                mang lại nhiều lợi ích về sức khỏe cho bé yêu. Dưới đây hãy cùng 
+                                Phòng khám thú y Pet5H tìm hiểu ngay nhé! Triệt sản là gì? Triệt 
+                                sản...
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="/dichvu">Xem thêm</a>
+        </div>
+    </div>
+
+    <div class="container-three">
+        <div class="back-img">
+            <img src="../img/fixed_blurred_team.3a035392cf6d4287.png" alt="back-img">
+        </div>
+        <div class="text-center">
+            <p class="text-doingu">Đội ngũ bác sĩ</p>
+            <div class="underline"></div>
+            <p calss="text-des" style="font-size: 18px;">Sở hữu đội ngũ bác sĩ và y tá giàu kinh nghiệm, Bệnh viện thú y Pet5H luôn đảm bảo mang đến sự chăm sóc 
+                tốt nhất cho thú cưng của bạn!</p>
+        </div>
+        <div class="front-img">
+            <img src="../img/3-1-20240823142619.png" alt="doi-ngu-bac-si">
+        </div>
+    </div>
+    <div class="container-four">
+        <div class="text-center">
+            <p class="text-img">Hình ảnh tại Pet5H</p>
+            <div class="underline"></div>
+            <p class="text-des" style="font-size: 18px;">Mỗi khoảnh khắc của thú cưng tại Pet5H đều trở nên đáng nhớ và đầy yêu thương.</p>
+        </div>
+        <div id="slideshow">
+            <div class="slide-wrapper">
+                <div class="slide">
+                    <img src="../img/1-20240823142406.png" alt="anh-1">
+                </div>
+                <div class="slide">
+                    <img src="../img/4-20240823142427.png" alt="anh-2">
+                </div>
+                <div class="slide">
+                    <img src="../img/5-20240823142442.png" alt="anh-3">
+                </div>
+                <div class="slide">
+                    <img src="../img/11-20240823142454.png" alt="anh-4">
+                </div>
+                <div class="slide">
+                    <img src="../img/1-20240823142522.png" alt="anh-5">
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>    
+        
+    </div>
+    <div class="container-five">
+        <div class="text-center">
+            <p class="text-img">Khách hàng nói gì về Pet5H?</p>
+            <div class="underline"></div>
+            <p class="text-des">Những chia sẻ góp ý của bạn đều khiến Pet5H vô cùng trân trọng, đồng thời không ngừng cố gắng hoàn thiện hơn mỗi ngày.</p>
+        </div>
+        <div id="slideshow">
+            <div class="slide-wrapper">
+                <div class="slide">
+                    <img src="../img/1-20240823142406.png" alt="anh-1">
+                </div>
+                <div class="slide">
+                    <img src="../img/4-20240823142427.png" alt="anh-2">
+                </div>
+                <div class="slide">
+                    <img src="../img/5-20240823142442.png" alt="anh-3">
+                </div>
+                <div class="slide">
+                    <img src="../img/11-20240823142454.png" alt="anh-4">
+                </div>
+                <div class="slide">
+                    <img src="../img/1-20240823142522.png" alt="anh-5">
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>    
+        
+    </div>
+
+    <div class="container-six">
+        <div class="six-text">
+            <div class="text-left">
+                <p>Tin tức</p>
+            </div>
+        </div>
+
+        <div class="article-wrap total-3">
+            <div class="article-left">
+                <img src ='../img/benh-man-tinh-o-thu-cung-20241112151647 (1).png' alt="Benh_than_man_tinh">
+            </div>
+            <div class="six-right">
+                <a class="article" href="https://pet5h.vn/tin-tuc/37-benh-co-the-la-nguyen-nhan-khien-cho-cho-bi-sot">
+                    <img src="https://cdn.pet5h.vn/37-benh-lam-cho-bi-sot-20240910163229.png?token=cvh6685467" alt="37_benh">
+                    <div class="text-wrap">
+                        <h3 class="title max-2-lines">37 bệnh có thể là nguyên nhân khiến cho chó bị sốt</h3>
+                        <p class="content max-2-lines">"Tình trạng chó bị sốt thường rất phổ biến và 
+                            là triệu chứng của rất nhiều bệnh khác nhau. Nếu như triệu chứng sốt cao và mệt mỏi không được chẩn đoán chính xác có thể gây hậu quả khôn lường đối với chó. Dù bệnh ở mức độ nào cũng sẽ ảnh hưởng nhất định đến sức khỏe của chó. Đã có nhiều độc giả của&nbsp; Pet5H &nbsp;gặp phải vấn đề này. Hãy cùng tìm hiểu triệu 
+                            chứng sốt cao ở chó do những bệnh nào gây ra nh..."
+                        </p>
+                        <span class="post-date">14/07/2024</span>
+                    </div>
+                </a>
+                <a class="article" href="https://pet5h.vn/tin-tuc/15-loai-thuoc-nho-mat-cho-meo-duoc-thu-y-khuyen-dung">
+                    <img src="https://cdn.pet5h.vn/15-thuoc-nho-mat-cho-meo-20240910164405.png?token=cvh6685467" alt="15_loai_thuoc">
+                    <div class="text-wrap">
+                        <h3 class="title max-2-lines">15 loại thuốc nhỏ mắt cho mèo được thú y khuyên dùng</h3>
+                        <p class="content max-2-lines">"Sự khác nhau giữa nước rửa mắt và thuốc nhỏ mắt cho mèo Thuốc nhỏ mắt cho mèo là các dung dịch được kết hợp từ các thành phần dược liệu nhằm giải quyết các vấn đề về mắt.
+                             Chúng được sử dụng dưới dạng giọt đặt trực tiếp lên bề mặt mắt, nhằm giúp giảm triệu chứng mắt khô, cung cấp hiệu ứng dược liệu và dầu nhờn cho mí mắt. Thuốc nhỏ mắt có khả năng
+                              trị các nhiễm trùng do vi khuẩn, giảm tiết dịch ..."
+                        </p>
+                        <span class="post-date">12/07/2024</span>
+                    </div>
+                </a>
+                <a class="article" href="https://pet5h.vn/tin-tuc/3-ly-do-hay-dung-lai-neu-ban-dang-cho-cho-meo-an-chay-43472075">
+                    <img src="https://cdn.pet5h.vn/cho-meo-an-chay-20240910172702.png?token=cvh6685467" alt="3_ly_do">
+                    <div class="text-wrap">
+                        <h3 class="title max-2-lines">3 lý do hãy dừng lại nếu bạn đang cho chó mèo ăn chay</h3>
+                        <p class="content max-2-lines">"Xin khẳng định chó mèo không ăn chay Thời gian gần đây chúng tôi có nhận được khá nhiều những 
+                            ý kiến tranh luận về việc: Chó có ăn chay được không? Nên hay không cho chó mèo ăn rau củ? Ăn với hàm lượng như thế nào? 
+                            Thời gian kéo dài ra sao? Và đặc biệt là có ý kiến còn khẳng định rằng chó mèo ăn chay 4 ngày, 8 ngày mà vẫn khỏe mạnh bình thường.
+                             Theo Tiến sĩ Lisa Weeth, một chuyên gia dinh dư..."
+                        </p>
+                        <span class="post-date">12/07/2024</span>
+                    </div>
+                </a>
+                <div class="view-all">
+                    <a href="https://pet5h.vn/tin-tuc">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+
+    <div class="container-seven">
+        <div class="seven-left bg-cover"></div>
+        <div class="seven-right">
+            <div class="title">
+                <h1 class="book-seven">Đặt <span>lịch khám</span></h1>
+                <h2 class="h2-seven">Không ngại nắng mưa, giông bão Pet5H luôn ở đây sẵn sàng hỗ trợ các bé thú cưng.</h2>
+            </div>
+            <div class="btn-book-seven">
+                <button class="book-7">Đặt lịch khám</button>
+                <button class="help">Hỗ trợ ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-one">
+            <div class="row row-cols-4">
+                <div class="col">
+                    <div class="mission">
+                        <div class="img-logo">
+                            <img src = "../img/logo.d392dd55a2bcc5d1.svg" alt="logo">
+                        </div>
+                        <div class="su-menh--text">
+                            <p class="text1">
+                                Với sứ mệnh “Vì sức khỏe và hạnh phúc thú cưng” Pet5H hướng đến trở thành chuỗi hệ thống bệnh viện, Bệnh viện thú y đầu tiên của Việt Nam đặt trọng tâm phúc lợi thú cưng và sự an tâm của chủ nuôi lên hàng đầu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="contact">
+                        <p class="contact-text">Liên hệ</p>
+                        <div class="address">
+                            <strong class="address-text">Địa chỉ:</strong>
+                            <p class="address-des-1">
+                                <li>295 Hoàng Hoa Thám, Liễu Giai, Ba Đình, Hà Nội.</li>
+                                <p>Hotline: 0988.799.763</p>
+                            </p>
+                            <p class="address-des-2">
+                                <li>36B/11 Tô Ngọc Vân, Quảng An, Tây Hồ, Hà Nội.</li>
+                                <p>Hotline: 0988.341.340</p>
+                            </p>
+                        </div>
+                        <div class="email">
+                            <div class="email-text">
+                                <strong class="email-1">Email:</strong>
+                                <p class="email-text">pet5h@fivevet.vn</p>
+                            </div>
+                        </div>
+                        <a href="#">Cơ sở của chúng tôi</a>
+                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="book-footer">
+                        <p class="book-text">
+                            Đặt lịch khám
+                        </p>
+                        <p class="book-des">
+                            Bạn có thể gọi hotline 0988.799.763 / 0988.341.340 hoặc đặt lịch hẹn khám online với chúng tôi.
+                        </p>
+                        <button class="btn book-footer">Đặt lịch khám</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-map">
+            <div class="map-1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14504.763235222492!2d105.82389900000001!3d21.066759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab669982b397%3A0xc154da7fa30f87ee!2zQuG7h25oIHZp4buHbiBUaMO6IHkgUGV0NUggVMOieSBI4buTIC0gUGV0NUggVmV0ZXJpbmFyeSBIb3NwaXRhbA!5e1!3m2!1svi!2sus!4v1744551326420!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14507.179397031463!2d105.818538!3d21.041968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab5700718dd9%3A0xa6ce2ff3ee2fdec2!2sPho%CC%80ng%20Kha%CC%81m%20Thu%CC%81%20Y%20Pet5h%20-%20Pet5h%20Veterinary%20Clinic%20(Formerly%20MAIVet)!5e1!3m2!1svi!2sus!4v1744551346454!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/img.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script></body>
+    
+</html>
