@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stat_minus_1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Lb2T6vFbLheYBjTVMTRlRv9S0N+HWr/knblbdQ3bO4T2QRSWOTSEs7VBIeCr+z3h" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <ht>
 
     <header class="header">
         <div class="header-left">
+            <div class="inner-icon-mobi" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars" style="font-size: 32px;"></i>
+            </div>
             <div class="logo-page">
-                <img src ='../img/logo.d392dd55a2bcc5d1.svg' alt="logo-page">
+                <img src ='./img/logo.d392dd55a2bcc5d1.svg' alt="logo-page">
             </div>
             <div class="header-menu">
                 <ul>
@@ -29,6 +32,25 @@
                     <li><a href="#lich-su-kham">Lịch sử khám</a></li>
                 </ul>
             </div>
+            <div class="menu-wrapper" id="menuWrapper">
+                <div class="main-menu">
+                    <div class="menu-logo"></div>
+                    <div class="close" onclick="toggleMenu()"></div>
+                    <div class="menu-list">
+                        <ul>
+                            <li><a href="#trang-chu">Trang chủ</a></li>
+                            <li><a href="#ve-chung-toi">Về chúng tôi</a></li>
+                            <li><a href="#dich-vu">Dịch vụ</a></li>
+                            <li><a href="#tin-tuc">Tin tức</a></li>
+                            <li><a href="#lien-he">Liên hệ</a></li>
+                            <li><a href="#tuyen-dung">Tuyển dụng</a></li>
+                            <li><a href="#lich-su-kham">Lịch sử khám</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            
         </div>
         <div class="header-right">
             <div class="button">
@@ -36,7 +58,10 @@
                     <button class = "btn--book">Đặt lịch khám</button>
                 </div>
                 <div class="button--login">
-                    <button class = "btn--login">Đăng nhập</button>
+                    <a href="./login.html">
+                        <button class = "btn--login">Đăng nhập</button>
+                        <button class = "btn--logOut">Đăng xuất</button>
+                    </a>                  
                 </div>
             </div>
             <div class="language-switcher">
@@ -48,6 +73,11 @@
     </header>
 
     <div class="container-one">
+        <div class="inner-mobi">
+            <h1 class="inner-text">
+                Hệ thống thú y, Vì sức khỏe và hạnh phúc của thú cưng
+            </h1>
+        </div>
         <div class="one-left">
             <div class="one-left--text">
                 <div class="h1--text">
@@ -61,9 +91,9 @@
         </div>
         <div class="one-right">
             <div class="one-right--img">
-                <img src = "../img/fixed_banner_large.png" alt="banner_large">
+                <img src = "./img/fixed_banner_large.png" alt="banner_large">
                 <div class="img--small">
-                    <img src = "../img/fixed_banner_small.png" alt="banner_small">
+                    <img src = "./img/fixed_banner_small.png" alt="banner_small">
                 </div>
             </div>
 
@@ -85,7 +115,7 @@
             <div class="each-service col-12 col-md-6 col-lg-4">
                 <div class="card p-3 shadow-sm">
                     <div class="service-item">
-                        <img src ="../img/chamsosuckhoe.png" alt="Chăm sóc sức khoẻ">
+                        <img src ="./img/chamsosuckhoe.png" alt="Chăm sóc sức khoẻ">
                         <div class="text-wrap">
                             <h2 class="over-3-dots">CHĂM SÓC SỨC KHỎE</h2>
                             <p class="max-3-lines summary">
@@ -106,7 +136,7 @@
             <div class="each-service col-12 col-md-6 col-lg-4">
                 <div class="card p-3 shadow-sm">
                     <div class="service-item">
-                        <img src ="../img/tamsoatbenh.png" alt="Chăm sóc sức khoẻ">
+                        <img src ="./img/tamsoatbenh.png" alt="Chăm sóc sức khoẻ">
                         <div class="text-wrap">
                             <h2 class="over-3-dots">TẦM SOÁT BỆNH</h2>
                             <p class="max-3-lines summary">
@@ -126,7 +156,7 @@
             <div class="each-service col-12 col-md-6 col-lg-4">
                 <div class="card p-3 shadow-sm">
                     <div class="service-item">
-                        <img src ="../img/khamtainha.png" alt="Chăm sóc sức khoẻ">
+                        <img src ="./img/khamtainha.png" alt="Khám tại nhà">
                         <div class="text-wrap">
                             <h2 class="over-3-dots">KHÁM CHỮA BỆNH TẠI NHÀ</h2>
                             <p class="max-3-lines summary">
@@ -147,7 +177,7 @@
             <div class="each-service col-12 col-md-6 col-lg-4">
                 <div class="card p-3 shadow-sm">
                     <div class="service-item">
-                        <img src ="../img/tiemphong.jpg" alt="Chăm sóc sức khoẻ">
+                        <img src ="./img/tiemphong.jpg" alt="Tiêm phòng">
                         <div class="text-wrap">
                             <h2 class="over-3-dots">TIÊM PHÒNG VACCINE</h2>
                             <p class="max-3-lines summary">
@@ -168,7 +198,7 @@
             <div class="each-service col-12 col-md-6 col-lg-4">
                 <div class="card p-3 shadow-sm">
                     <div class="service-item">
-                        <img src ="../imG/xetnghiem.png" alt="Chăm sóc sức khoẻ">
+                        <img src ="./img/xetnghiem.png" alt="Xét nghiệm">
                         <div class="text-wrap">
                             <h2 class="over-3-dots">XÉT NGHIỆM - CHẨN ĐOÁN HÌNH ẢNH</h2>
                             <p class="max-3-lines summary">
@@ -189,7 +219,7 @@
             <div class="each-service col-12 col-md-6 col-lg-4">
                 <div class="card p-3 shadow-sm">
                     <div class="service-item">
-                        <img src ="../img/trietsan.jpg" alt="Chăm sóc sức khoẻ">
+                        <img src ="./img/trietsan.jpg" alt="Triệt sản">
                         <div class="text-wrap">
                             <h2 class="over-3-dots">TRIỆT SẢN</h2>
                             <p class="max-3-lines summary">
@@ -209,13 +239,13 @@
             </div>
         </div>
         <div class="view-all">
-            <a href="/dichvu">Xem thêm</a>
+            <a href="https://pet5h.vn/dich-vu">Xem thêm</a>
         </div>
     </div>
 
     <div class="container-three">
         <div class="back-img">
-            <img src="../img/fixed_blurred_team.3a035392cf6d4287.png" alt="back-img">
+            <img src="./img/fixed_blurred_team.3a035392cf6d4287.png" alt="back-img">
         </div>
         <div class="text-center">
             <p class="text-doingu">Đội ngũ bác sĩ</p>
@@ -224,7 +254,7 @@
                 tốt nhất cho thú cưng của bạn!</p>
         </div>
         <div class="front-img">
-            <img src="../img/3-1-20240823142619.png" alt="doi-ngu-bac-si">
+            <img src="./img/3-1-20240823142619.png" alt="doi-ngu-bac-si">
         </div>
     </div>
     <div class="container-four">
@@ -236,25 +266,26 @@
         <div id="slideshow">
             <div class="slide-wrapper">
                 <div class="slide">
-                    <img src="../img/1-20240823142406.png" alt="anh-1">
+                    <img src="./img/1-20240823142406.png" alt="anh-1">
                 </div>
                 <div class="slide">
-                    <img src="../img/4-20240823142427.png" alt="anh-2">
+                    <img src="./img/4-20240823142427.png" alt="anh-2">
                 </div>
                 <div class="slide">
-                    <img src="../img/5-20240823142442.png" alt="anh-3">
+                    <img src="./img/5-20240823142442.png" alt="anh-3">
                 </div>
                 <div class="slide">
-                    <img src="../img/11-20240823142454.png" alt="anh-4">
+                    <img src="./img/11-20240823142454.png" alt="anh-4">
                 </div>
                 <div class="slide">
-                    <img src="../img/1-20240823142522.png" alt="anh-5">
+                    <img src="./img/1-20240823142522.png" alt="anh-5">
                 </div>
             </div>
         </div>
         <div class="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
         </div>    
         
     </div>
@@ -266,21 +297,61 @@
         </div>
         <div id="slideshow">
             <div class="slide-wrapper">
-                <div class="slide">
-                    <img src="../img/1-20240823142406.png" alt="anh-1">
+                
+                <div class="slide review">
+                    <i class="fa-solid fa-quote-right" style="color: #F8881F ;"></i>
+                    <p class="text-revieww">Từng cho bé rồng khám ở nhiều chỗ nhưng đến với Pet5H thì đúng là chân ái, tình trạng sức khỏe cải thiện rõ rệt sau từng buổi.
+                    </p>
+                    <div class="user">
+                        <img src="./img/fixed_reviewer_nhat_thuy.jpg" alt="nhat_thuy">
+                        <div class="user-info">
+                            <h3 class="user-name">Nhật Thủy</h3>
+                            <div class="text-underline"></div>
+                            <h4 class="pet-owner">Chủ nuôi</h4>
+                        </div>
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="../img/4-20240823142427.png" alt="anh-2">
+                <div class="slide review">
+                    <i class="fa-solid fa-quote-right" style="color: #F8881F ;"></i>
+                    <p class="text-review">Rất bất ngờ với sự tỉ mẩn chu đáo của Bệnh viện. Gấu nhà mình kén ăn mà gửi tới đây có 10 ngày mà về trộm vía quá.
+                    </p>
+                    <div class="user">
+                        <img src="./img/fixed_reviewer_the_anh.jpg" alt="the_anh">
+                        <div class="user-info">
+                            <h3 class="user-name">Thế Anh</h3>
+                            <div class="text-underline"></div>
+                            <h4 class="pet-owner">Chủ nuôi</h4>
+                        </div>
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="../img/5-20240823142442.png" alt="anh-3">
+                <div class="slide review">
+                    <i class="fa-solid fa-quote-right" style="color: #F8881F ;"></i>
+                    <p class="text-review">Bệnh viện chuyên nghiệp đầy đủ xét nghiệm siêu âm, máy móc chăm sóc thú cưng. Bác sĩ rất nhiệt tình, mình qua rất nhiều lần rồi.
+                    </p>
+                    <div class="user">
+                        <img src="./img/fixed_reviewer_phan_thom.jpg" alt="phan_thom">
+                        <div class="user-info">
+                            <h3 class="user-name">Phan Thơm</h3>
+                            <div class="text-underline"></div>
+                            <h4 class="pet-owner">Chủ nuôi</h4>
+                        </div>
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="../img/11-20240823142454.png" alt="anh-4">
+                <div class="slide review">
+                    <i class="fa-solid fa-quote-right" style="color: #F8881F ;"></i>
+                    <p class="text-review">Các dịch vụ tại Bệnh viện của Pet5H đều rất tốt, tư vấn hỗ trợ nhiệt tình và vui vẻ. Giá cả phải chăng, rõ ràng, bác sĩ giỏi.
+                    </p>
+                    <div class="user">
+                        <img src="./img/fixed_reviewer_cuong_nguyen.jpg" alt="cuong_nguyen">
+                        <div class="user-info">
+                            <h3 class="user-name">Cương Nguyễn</h3>
+                            <div class="text-underline"></div>
+                            <h4 class="pet-owner">Chủ nuôi</h4>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="slide">
-                    <img src="../img/1-20240823142522.png" alt="anh-5">
-                </div>
+                
             </div>
         </div>
         <div class="dots">
@@ -299,7 +370,7 @@
 
         <div class="article-wrap total-3">
             <div class="article-left">
-                <img src ='../img/benh-man-tinh-o-thu-cung-20241112151647 (1).png' alt="Benh_than_man_tinh">
+                <img src ='./img/benh-man-tinh-o-thu-cung-20241112151647 (1).png' alt="Benh_than_man_tinh">
             </div>
             <div class="six-right">
                 <a class="article" href="https://pet5h.vn/tin-tuc/37-benh-co-the-la-nguyen-nhan-khien-cho-cho-bi-sot">
@@ -359,12 +430,12 @@
     </div>
 
     <div class="footer">
-        <div class="footer-one">
-            <div class="row row-cols-4">
-                <div class="col">
+        <div class="footer-one container">
+            <div class="row">
+                <div class="block-item block-item-1">
                     <div class="mission">
                         <div class="img-logo">
-                            <img src = "../img/logo.d392dd55a2bcc5d1.svg" alt="logo">
+                            <img src = "./img/logo.d392dd55a2bcc5d1.svg" alt="logo">
                         </div>
                         <div class="su-menh--text">
                             <p class="text1">
@@ -373,19 +444,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="block-item block-item-2">
                     <div class="contact">
                         <p class="contact-text">Liên hệ</p>
                         <div class="address">
                             <strong class="address-text">Địa chỉ:</strong>
-                            <p class="address-des-1">
-                                <li>295 Hoàng Hoa Thám, Liễu Giai, Ba Đình, Hà Nội.</li>
-                                <p>Hotline: 0988.799.763</p>
-                            </p>
-                            <p class="address-des-2">
-                                <li>36B/11 Tô Ngọc Vân, Quảng An, Tây Hồ, Hà Nội.</li>
-                                <p>Hotline: 0988.341.340</p>
-                            </p>
+                            <ul class="address-des-1">
+                                <li>295 Hoàng Hoa Thám, Liễu Giai, Ba Đình, Hà Nội.
+                                    <p>Hotline: 0988.799.763</p>
+                                </li>
+                                
+                            </ul>
+                            <ul class="address-des-2">
+                                <li>36B/11 Tô Ngọc Vân, Quảng An, Tây Hồ, Hà Nội.
+                                    <p>Hotline: 0988.341.340</p>
+                                </li>
+                                
+                            </ul>
                         </div>
                         <div class="email">
                             <div class="email-text">
@@ -393,11 +468,11 @@
                                 <p class="email-text">pet5h@fivevet.vn</p>
                             </div>
                         </div>
-                        <a href="#">Cơ sở của chúng tôi</a>
+                        <a href="https://pet5h.vn/lien-he">Cơ sở của chúng tôi</a>
                         
                     </div>
                 </div>
-                <div class="col">
+                <div class="block-item block-item-3">
                     <div class="book-footer">
                         <p class="book-text">
                             Đặt lịch khám
@@ -419,8 +494,11 @@
             </div>
         </div>
     </div>
-    <script src="../javascript/img.js"></script>
+    <script src="./javascript/img.js"></script>
+    <script src="./javascript/menu.js"></script>
+    <script src="./javascript/checkLogin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script></body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+</body>
     
 </html>

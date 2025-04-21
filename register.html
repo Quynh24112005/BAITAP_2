@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stat_minus_1" />
+    <link rel="stylesheet" href="./css/register.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <div class="header-container">
+                <div class="inner-icon-mobi">
+                    <i class="fa-solid fa-bars" style="font-size: 32px;"></i>
+                </div>
+                <div class="logo-header">
+                    <img src="./img/logo.d392dd55a2bcc5d1.svg" alt="Logo">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/trangchu">Trang chủ</a></li>
+                        <li><a href="/vechungtoi">Về chúng tôi <i class="fa-solid fa-caret-down fa-lg"></i></a></li>
+                        <li><a href="/dichvu">Dịch vụ <i class="fa-solid fa-caret-down fa-lg"></i></a></li>
+                        <li><a href="/tintuc">Tin tức</a></li>
+                        <li><a href="/lienhe">Liên hệ</a></li>
+                        <li><a href="/tuyendung">Tuyển dụng</a></li>
+                        <li><a href="/lichsukham">Lịch sử khám</a></li>
+                    </ul>
+                </div>
+                <div class="right-header">
+                    <div class="book-container">
+                        <div class="button button-text">Đặt lịch khám</div>
+                    </div>
+                    <div class="icon-language">
+                        <div class="lang-eng" style="color:#B8B8B8;">ENG</div>
+                        <div class="divider"> | </div>
+                        <div class="lang-vie active">VIE</div>
+                    </div>
+                    <div class="bg-contain">
+                        <img src="./img/booking-selected.5270f4aee19e0a27 - Copy - Copy.svg" alt="booking">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="login-container">
+            <div class="images-container bg-cover"></div>
+            <div class="login-wrap">
+                <div class="login-form">
+                    <form id="formRegister">
+                        <p class="title">Đăng ký</p>
+                        <div class="row-item-name">
+                            <h6 class="row-item-emai-text">Họ và tên</h6>
+                            <dx-text-box class="row-item-text-box">
+                                <div class="outline">
+                                    <input type="text" id="username" placeholder="Nhập họ và tên">
+                                    <i class="fa-regular fa-user"></i>
+                                </div>
+                            </dx-text-box>
+                        </div>
+                        <div class="row-item-email">
+                            <h6 class="row-item-emai-text">Email</h6>
+                            <dx-text-box class="row-item-text-box">
+                                <div class="outline">
+                                    <input type="email" id="email" placeholder="Nhập email của bạn">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                            </dx-text-box>
+                        </div>
+                        <div class="row-item-password" >
+                            <h6 class="row-item-emai-text">Mật khẩu</h6>
+                            <dx-text-box class="row-item-text-box">
+                                <div class="outline">
+                                    <input type="password" id="password" placeholder="Nhập mật khẩu">
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                </div>
+                            </dx-text-box>
+                        </div>
+                        <div class="row-item-password-again" >
+                            <h6 class="row-item-emai-text">Nhập lại mật khẩu</h6>
+                            <dx-text-box class="row-item-text-box">
+                                <div class="outline">
+                                    <input type="password" id="rePassword" placeholder="Nhập lại mật khẩu">
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                </div>
+                            </dx-text-box>
+                        </div>
+                        <div class="row-item-dob">
+                            <h6 class="row-item-emai-text">Ngày sinh</h6>
+                            <input type="text" id="dob" placeholder="YYYY-DD-MM">
+                        </div>
+                        <div class="row-item-gender">
+                            <h6 class="row-item-emai-text">Giới tính</h6>
+                            <select class="form-control" id="gender">
+                                <option value="1">Nữ</option>
+                                <option value="0">Nam</option>
+                            </select>
+                        </div>
+                        <div class="row-item-phone">
+                            <h6 class="row-item-emai-text">Điện thoại</h6>
+                            <input type="text" id="phone" placeholder="0123456789">
+                        </div>
+                        <div class="button-login">
+                            <button type="submit" class="submit">Đăng ký</button>
+                        </div>
+                    </form>
+                    <p class="creat"><span>Bạn đã có tài khoản? <a class="signin" href="./login.html">Đăng nhập</a></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-one container">
+                <div class="row">
+                    <div class="block-item block-item-1">
+                        <div class="mission">
+                            <div class="img-logo">
+                                <img src = "./img/logo.d392dd55a2bcc5d1.svg" alt="logo">
+                            </div>
+                            <div class="su-menh--text">
+                                <p class="text1">
+                                    Với sứ mệnh “Vì sức khỏe và hạnh phúc thú cưng” Pet5H hướng đến trở thành chuỗi hệ thống bệnh viện, Bệnh viện thú y đầu tiên của Việt Nam đặt trọng tâm phúc lợi thú cưng và sự an tâm của chủ nuôi lên hàng đầu.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-item block-item-2">
+                        <div class="contact">
+                            <p class="contact-text">Liên hệ</p>
+                            <div class="address">
+                                <strong class="address-text">Địa chỉ:</strong>
+                                <ul class="address-des-1">
+                                    <li>295 Hoàng Hoa Thám, Liễu Giai, Ba Đình, Hà Nội.
+                                        <p>Hotline: 0988.799.763</p>
+                                    </li>
+                                    
+                                </ul>
+                                <ul class="address-des-2">
+                                    <li>36B/11 Tô Ngọc Vân, Quảng An, Tây Hồ, Hà Nội.
+                                        <p>Hotline: 0988.341.340</p>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="email">
+                                <div class="email-text">
+                                    <strong class="email-1">Email:</strong>
+                                    <p class="email-text">pet5h@fivevet.vn</p>
+                                </div>
+                            </div>
+                            <a href="https://pet5h.vn/lien-he">Cơ sở của chúng tôi</a>
+                            
+                        </div>
+                    </div>
+                    <div class="block-item block-item-3">
+                        <div class="book-footer">
+                            <p class="book-text">
+                                Đặt lịch khám
+                            </p>
+                            <p class="book-des">
+                                Bạn có thể gọi hotline 0988.799.763 / 0988.341.340 hoặc đặt lịch hẹn khám online với chúng tôi.
+                            </p>
+                            <button class="btn book-footer">Đặt lịch khám</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-map">
+                <div class="map-1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14504.763235222492!2d105.82389900000001!3d21.066759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab669982b397%3A0xc154da7fa30f87ee!2zQuG7h25oIHZp4buHbiBUaMO6IHkgUGV0NUggVMOieSBI4buTIC0gUGV0NUggVmV0ZXJpbmFyeSBIb3NwaXRhbA!5e1!3m2!1svi!2sus!4v1744551326420!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map-2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14507.179397031463!2d105.818538!3d21.041968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab5700718dd9%3A0xa6ce2ff3ee2fdec2!2sPho%CC%80ng%20Kha%CC%81m%20Thu%CC%81%20Y%20Pet5h%20-%20Pet5h%20Veterinary%20Clinic%20(Formerly%20MAIVet)!5e1!3m2!1svi!2sus!4v1744551346454!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- script -->
+     <script src="./javascript/register.js"></script>
+    <!-- end-script -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+</body>
+</html>
