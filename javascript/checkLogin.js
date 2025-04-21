@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         if(btnLogin) btnLogin.style.display = "inline-block";
         if(btnLogout) btnLogout.style.display = "none";
-    //   window.location.href = "login.html";
+        window.location.href = "login.html";
     }
     else {
         if(btnLogin) btnLogin.style.display = "none";
