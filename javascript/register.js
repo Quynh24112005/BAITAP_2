@@ -67,7 +67,7 @@ async function signUp(dobVal, genderVal, phoneVal) {
   };
 
   try {
-    const response = await fetch("https://learning.oapi.vn/api/accounts/register", {
+    const response = await fetch("https://corsproxy.io/?https://learning.oapi.vn/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
