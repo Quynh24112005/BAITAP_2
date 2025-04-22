@@ -13,20 +13,48 @@ window.addEventListener("DOMContentLoaded", () => {
 formLogin.addEventListener("submit",function(e){
     e.preventDefault();
 
-    const userLocal = JSON.parse(localStorage.getItem("users") || "[]");
-
-    const findUser = userLocal.find((user) => user.email === email.value 
-        && user.password === password.value);
-
-    if(!findUser){
-        alert("Email hoặc mật khẩu không đúng!")
+    const emailValue = email.value.trim();
+    const passwordValue = password.value;
+    if(!emailValue){
+        alert("Email không được để trống")
     }
-    else{
-        window.location.href="index.html";
-        localStorage.setItem("isLoggedIn", "true");
-        localStorage.setItem("userLogin", JSON.stringify(findUser));
+    if(!passwordValue){
+        alert("Mật khẩu không được để trống")
     }
+
+    login(emailValue,passwordValue);
 });
+
+async function login(emailValue,passwordValue) {
+    try{
+        const response = await fetch("https://baitap-2-1.onrender.com/user");
+        const users = await response.json();
+
+        const findUser = users.find((user) => user.email === emailValue.value 
+                                        && user.password === passwordValue);
+
+        if(!findUser){
+            alert("Email hoặc mật khẩu không đúng!");
+            return;
+        }
+        const result = {
+            grandType: "Bearer",
+            user: findUser
+        };
+
+        localStorage.setItem("isLoggedIn","true");
+        localStorage.setItem("userLogin", JSON.stringify(result));
+
+        window.location.href = "index.html";
+    }
+
+    catch(error){
+        console.log("Lỗi khi login:",error);
+        alert("Lỗi khi đăng nhập");
+    };
+}
+        
+
 
 
 
