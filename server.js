@@ -1,6 +1,9 @@
 const jsonServer = require("json-server");
+const path = require("path"); // ✅ Thêm dòng này
 const server = jsonServer.create();
-const router = jsonServer.router("database.json");
+
+// ✅ Dùng đường dẫn tuyệt đối để đảm bảo đúng file JSON
+const router = jsonServer.router(path.join(__dirname, "database.json"));
 const middlewares = jsonServer.defaults();
 
 server.use(jsonServer.bodyParser);
@@ -30,7 +33,7 @@ server.post("/login", (req, res) => {
   }
 });
 
-// ✅ Gắn router vào đường dẫn /users (thay vì mặc định /)
+// ✅ Mount router vào /users (bắt buộc nếu bạn dùng JSON Server custom)
 server.use("/users", router);
 
 // ✅ Khởi động server
