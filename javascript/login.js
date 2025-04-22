@@ -18,7 +18,7 @@ formLogin.addEventListener("submit", function (e) {
 
 async function login(emailValue, passwordValue) {
   try {
-    const response = await fetch("https://68070264e81df7060eb88a78.mockapi.io/api/register/user");
+    const response = await fetch("https://68073bfbe81df7060eb94fab.mockapi.io/api/users");
     
     if (!response.ok) {
       throw new Error("Không thể kết nối đến server");

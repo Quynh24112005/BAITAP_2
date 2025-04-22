@@ -67,7 +67,7 @@ async function signUp(dobVal, genderVal, phoneVal) {
   };
 
   try {
-    const response = await fetch("https://68070264e81df7060eb88a78.mockapi.io/api/register/user", {
+    const response = await fetch("https://68073bfbe81df7060eb94fab.mockapi.io/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
