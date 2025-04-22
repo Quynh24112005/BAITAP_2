@@ -46,7 +46,7 @@ async function login(emailValue, passwordValue) {
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("userLogin", JSON.stringify(data));
 
-    alert("Đăng nhập thành công!");
+    alert("Đăng nhập thành công");
     window.location.href = "index.html";
   } catch (error) {
     console.error("Lỗi khi đăng nhập:", error);
