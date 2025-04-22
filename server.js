@@ -1,42 +1,35 @@
 const jsonServer = require("json-server");
-const path = require("path"); // ✅ Thêm dòng này
-const server = jsonServer.create();
+const path = require("path");
 
-// ✅ Dùng đường dẫn tuyệt đối để đảm bảo đúng file JSON
+const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, "database.json"));
 const middlewares = jsonServer.defaults();
 
-server.use(jsonServer.bodyParser);
 server.use(middlewares);
+server.use(jsonServer.bodyParser);
 
-// ✅ Custom API: /login
+// API đăng nhập giả lập
 server.post("/login", (req, res) => {
-  const { grantType, username, password } = req.body;
-
-  if (grantType !== "Bearer") {
-    return res.status(400).json({ message: "Loại xác thực không hợp lệ" });
-  }
-
+  const { username, password } = req.body;
   const users = router.db.get("users").value();
-  const user = users.find(
-    u => u.username === username && u.password === password
-  );
+
+  const user = users.find(u => u.username === username && u.password === password);
 
   if (user) {
-    res.status(200).json({
+    res.json({
       message: "Đăng nhập thành công",
       accessToken: "fake-token-" + user.id,
       user
     });
   } else {
-    res.status(401).json({ message: "Email hoặc mật khẩu không đúng" });
+    res.status(401).json({ message: "Tên đăng nhập hoặc mật khẩu không đúng" });
   }
 });
 
-// ✅ Mount router vào /users (bắt buộc nếu bạn dùng JSON Server custom)
-server.use("/users", router);
+// Mount router mặc định (các API CRUD tự động)
+server.use(router);
 
-// ✅ Khởi động server
-server.listen(process.env.PORT || 3000, () => {
-  console.log("✅ JSON Server đang chạy.");
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`JSON Server đang chạy tại http://localhost:${PORT}`);
 });
