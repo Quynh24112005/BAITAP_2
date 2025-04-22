@@ -25,7 +25,7 @@ async function login(emailValue, passwordValue) {
       },
       body: JSON.stringify({
         grantType: "Bearer",
-        username: emailValue,
+        email: emailValue,
         password: passwordValue
       })
     });

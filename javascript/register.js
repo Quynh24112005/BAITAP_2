@@ -70,12 +70,13 @@ async function signUp(dobVal, genderVal, phoneVal) {
     const response = await fetch("https://learning.oapi.vn/api/accounts/register", {
       method: "POST",
       headers: {
+        'Accept': 'application/json',
         "Content-Type": "application/json"
       },
       body: JSON.stringify(user)
     });
 
-    const result = await response.json();
+    const result =  response.clone();
 
     if (!response.ok) {
       alert(result.message || "Đăng ký thất bại");
