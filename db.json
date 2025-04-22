@@ -1,9 +1,14 @@
 {
-    "users": [
-      {
-        "password": "lenhuquynh",
-        "email": "lenhuquynh_backend@gmail.com"
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": "0489",
+      "username": "lenhuquynh",
+      "password": "123456",
+      "fullname": "Lê Như Quỳnh",
+      "dob": "2005-11-11",
+      "gender": "1",
+      "email": "lenhuquynh_backend@gmail.com",
+      "phone": "0123456789"
+    }
+  ]
+}
