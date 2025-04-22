@@ -18,17 +18,21 @@ formLogin.addEventListener("submit", function (e) {
 
 async function login(emailValue, passwordValue) {
   try {
-    const response = await fetch("https://learning.oapi.vn/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        grantType: "Bearer",
-        email: emailValue,
-        password: passwordValue
-      })
-    });
+    const response = await fetch(
+      "https://corsproxy.io/?" + encodeURIComponent("https://learning.oapi.vn/api/auth/login"),
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          grantType: "Bearer",
+          username: emailValue,
+          password: passwordValue
+        })
+      }
+    );
+    
 
     const data = await response.json();
 
