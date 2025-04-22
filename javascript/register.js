@@ -67,7 +67,7 @@ async function signUp(dobVal, genderVal, phoneVal) {
   };
 
   try {
-    const response = await fetch("https://corsproxy.io/?https://learning.oapi.vn/api/auth/login", {
+    const response = await fetch("https://learning.oapi.vn/api/accounts/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -89,7 +89,7 @@ async function signUp(dobVal, genderVal, phoneVal) {
 
   } catch (error) {
     console.error("Lỗi khi gửi dữ liệu đăng ký:", error);
-    alert("Có lỗi xảy ra khi gửi dữ liệu. Vui lòng thử lại sau.");
+    alert("Có lỗi xảy ra. Vui lòng thử lại sau.");
   }
 }
  
