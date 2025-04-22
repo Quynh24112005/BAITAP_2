@@ -1,22 +1,22 @@
 const formLogin = document.getElementById("formLogin");
-const email = document.getElementById("email");
+const username = document.getElementById("username");
 const password = document.getElementById("password");
 
 formLogin.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const emailValue = email.value.trim();
+  const usernameValue = username.value.trim();
   const passwordValue = password.value;
 
-  if (!emailValue || !passwordValue) {
+  if (!usernameValue || !passwordValue) {
     alert("Email và mật khẩu không được để trống!");
     return;
   }
 
-  login(emailValue, passwordValue);
+  login(usernameValue, passwordValue);
 });
 
-async function login(emailValue, passwordValue) {
+async function login(usernameValue, passwordValue) {
   try {
     const response = await fetch("https://learning.oapi.vn/api/auth/login",
       {
@@ -26,7 +26,7 @@ async function login(emailValue, passwordValue) {
         },
         body: JSON.stringify({
           grantType: "Bearer",
-          email: emailValue,
+          username: usernameValue,
           password: passwordValue
         })
       });
