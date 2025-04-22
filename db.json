@@ -1,7 +1,6 @@
 {
     "users": [
       {
-        "grantType": "Bearer",
         "password": "lenhuquynh",
         "email": "lenhuquynh_backend@gmail.com"
       }
