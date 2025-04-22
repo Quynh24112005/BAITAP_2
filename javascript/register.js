@@ -67,7 +67,7 @@ async function signUp(dobVal, genderVal, phoneVal) {
     };
 
     try {
-        const response = await fetch("https://baitap-2-1.onrender.com/user", {
+        const response = await fetch("https://baitap-2-3o9s.onrender.com/user", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
