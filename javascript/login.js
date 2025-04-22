@@ -1,122 +1,56 @@
 const formLogin = document.getElementById("formLogin");
-const email = document.getElementById("email")
-const password = document.getElementById("password")
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 
-window.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn) {
-      window.location.href = "index.html";
-    }
-  });
-  
+formLogin.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-formLogin.addEventListener("submit",function(e){
-    e.preventDefault();
+  const emailValue = email.value.trim();
+  const passwordValue = password.value;
 
-    const emailValue = email.value.trim();
-    const passwordValue = password.value;
-    if(!emailValue){
-        alert("Email không được để trống")
-    }
-    if(!passwordValue){
-        alert("Mật khẩu không được để trống")
-    }
+  if (!emailValue || !passwordValue) {
+    alert("Email và mật khẩu không được để trống!");
+    return;
+  }
 
-    login(emailValue,passwordValue);
+  login(emailValue, passwordValue);
 });
 
-async function login(emailValue,passwordValue) {
-    try{
-        const response = await fetch("https://baitap-2-l2nj.onrender.com/login");
-        const users = await response.json();
-
-        const findUser = users.find((user) => user.email === emailValue.value 
-                                        && user.password === passwordValue);
-
-        if(!findUser){
-            alert("Email hoặc mật khẩu không đúng!");
-            return;
-        }
-        const result = {
-            grandType: "Bearer",
-            user: findUser
-        };
-
-        localStorage.setItem("isLoggedIn","true");
-        localStorage.setItem("userLogin", JSON.stringify(result));
-
-        window.location.href = "index.html";
+async function login(emailValue, passwordValue) {
+  try {
+    const response = await fetch("https://68070264e81df7060eb88a78.mockapi.io/api/register/user");
+    
+    if (!response.ok) {
+      throw new Error("Không thể kết nối đến server");
     }
 
-    catch(error){
-        console.log("Lỗi khi login:",error);
-        alert("Lỗi khi đăng nhập");
+    const users = await response.json();
+
+    if (!Array.isArray(users)) {
+      throw new Error("Dữ liệu người dùng không hợp lệ");
+    }
+
+    const user = users.find(
+      (user) => user.email === emailValue && user.password === passwordValue
+    );
+
+    if (!user) {
+      alert("Sai tên đăng nhập hoặc mật khẩu");
+      return;
+    }
+
+    const result = {
+      grantType: "Bearer",
+      user: user
     };
+
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("userLogin", JSON.stringify(result));
+
+    alert("Đăng nhập thành công!");
+    window.location.href = "index.html";
+  } catch (error) {
+    console.error("Lỗi khi đăng nhập:", error);
+    alert("Có lỗi xảy ra. Vui lòng thử lại sau.");
+  }
 }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-
-//     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-//     if(!isLoggedIn) {
-//         window.location.href ='https://pet-5-h-page.vercel.app/#'
-//     }
-//     else{
-//         window.location.href='https://baitap-2-cveh.vercel.app/#trang-chu'
-//     }
-// });
-// function check(form){
-//     if (form.userid.vale == "lenhuquymh" && form.pwd.value == "123456"){
-//         return true;
-//     }
-//     else{
-//         alert("Incorrect Password or Username")
-//         return false;
-//     }
-// }
-// loginForm.addEventListener('submit', function(e) {
-//     e.preventDefault();
-
-//     // Xử lý đăng nhập, ví dụ nếu login thành công:
-//     if(username === 'lenhuquynh' && password === '123456') {
-//         localStorage.setItem('isLoggedIn', 'true');
-
-//         // Chuyển trang sau khi set xong
-//         window.location.href = 'https://baitap-2-cveh.vercel.app/#trang-chu';
-//     } else {
-//         alert('Sai thông tin!');
-//     }
-// });

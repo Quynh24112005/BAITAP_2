@@ -5,95 +5,91 @@ const password = document.getElementById("password");
 const rePassword = document.getElementById("rePassword");
 
 formRegister.addEventListener("submit", function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const dob = document.getElementById("dob").value.trim();
-    const gender = document.getElementById("gender").value.trim();
-    const phone = document.getElementById("phone").value.trim();
+  const dob = document.getElementById("dob").value.trim();
+  const gender = document.getElementById("gender").value.trim();
+  const phone = document.getElementById("phone").value.trim();
 
-    if (!username.value.trim()) {
-        alert("Họ và tên không được để trống!");
-        return;
-    }
-    if (!email.value.trim()) {
-        alert("Email không được để trống!");
-        return;
-    }
-    if (!password.value) {
-        alert("Mật khẩu không được để trống!");
-        return;
-    }
-    if (!rePassword.value) {
-        alert("Mật khẩu xác nhận không được để trống!");
-        return;
-    }
-    if (!dob) {
-        alert("Ngày sinh không được để trống!");
-        return;
-    }
-    if (!gender) {
-        alert("Giới tính không được để trống!");
-        return;
-    }
-    if (!phone) {
-        alert("Số điện thoại không được để trống!");
-        return;
-    }
-    if (password.value !== rePassword.value) {
-        alert("Mật khẩu không khớp!");
-        return;
-    }
+  if (!username.value.trim()) {
+    alert("Họ và tên không được để trống!");
+    return;
+  }
+  if (!email.value.trim()) {
+    alert("Email không được để trống!");
+    return;
+  }
+  if (!password.value) {
+    alert("Mật khẩu không được để trống!");
+    return;
+  }
+  if (!rePassword.value) {
+    alert("Mật khẩu xác nhận không được để trống!");
+    return;
+  }
+  if (!dob) {
+    alert("Ngày sinh không được để trống!");
+    return;
+  }
+  if (!gender) {
+    alert("Giới tính không được để trống!");
+    return;
+  }
+  if (!phone) {
+    alert("Số điện thoại không được để trống!");
+    return;
+  }
+  if (password.value !== rePassword.value) {
+    alert("Mật khẩu không khớp!");
+    return;
+  }
 
-    signUp(dob, gender, phone);
+  signUp(dob, gender, phone);
 });
 
 async function signUp(dobVal, genderVal, phoneVal) {
-    const fullname = username.value.trim();
+  const fullname = username.value.trim();
 
-    const generatedUsername = fullname
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase()
-        .replace(/\s+/g, "");
+  const generatedUsername = fullname
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\s+/g, "");
 
-    const user = {
-        username: generatedUsername,
-        password: password.value,
-        fullname: fullname,
-        dob: dobVal,
-        gender: genderVal,
-        email: email.value.trim(),
-        phone: phoneVal
-    };
+  const user = {
+    username: generatedUsername,
+    password: password.value,
+    fullname: fullname,
+    dob: dobVal,
+    gender: genderVal,
+    email: email.value.trim(),
+    phone: phoneVal
+  };
 
-    try {
-        const response = await fetch("https://baitap-2-l2nj.onrender.com/users", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(user)
-        });
+  try {
+    const response = await fetch("https://68070264e81df7060eb88a78.mockapi.io/api/register/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user)
+    });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            alert(`Đăng ký thất bại: ${errorData.message || response.statusText}`);
-            return;
-        }
+    const result = await response.json();
 
-        // alert("Đăng ký thành công!");
-        formRegister.reset();
-
-        const userLocal = JSON.parse(localStorage.getItem("users") || "[]");
-        userLocal.push(user);
-        localStorage.setItem("users", JSON.stringify(userLocal));
-
-        // chuyển hướng về trang đăng nhập
-        window.location.href = "login.html"
-
-    } catch (error) {
-        console.error("Lỗi khi gửi dữ liệu đăng ký:", error);
-        alert("Có lỗi xảy ra khi gửi dữ liệu. Vui lòng thử lại sau.");
+    if (!response.ok) {
+      alert(result.message || "Đăng ký thất bại");
+      return;
     }
 
+    alert("Đăng ký thành công!");
+
+    formRegister.reset();
+    window.location.href = "login.html";
+
+  } catch (error) {
+    console.error("Lỗi khi gửi dữ liệu đăng ký:", error);
+    alert("Có lỗi xảy ra khi gửi dữ liệu. Vui lòng thử lại sau.");
+  }
 }
+ 
