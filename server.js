@@ -1,14 +1,12 @@
 const jsonServer = require("json-server");
-const fs = require("fs");
 const server = jsonServer.create();
-
-const userRouter = jsonServer.router("database.json"); // API /users
+const router = jsonServer.router("database.json");
 const middlewares = jsonServer.defaults();
 
 server.use(jsonServer.bodyParser);
 server.use(middlewares);
 
-// ✅ /login lấy từ db.json
+// ✅ Custom API: /login
 server.post("/login", (req, res) => {
   const { grantType, username, password } = req.body;
 
@@ -16,9 +14,8 @@ server.post("/login", (req, res) => {
     return res.status(400).json({ message: "Loại xác thực không hợp lệ" });
   }
 
-  // Đọc db.json (tách riêng với database.json)
-  const dbData = JSON.parse(fs.readFileSync("db.json", "utf-8"));
-  const user = dbData.users.find(
+  const users = router.db.get("users").value();
+  const user = users.find(
     u => u.username === username && u.password === password
   );
 
@@ -29,15 +26,14 @@ server.post("/login", (req, res) => {
       user
     });
   } else {
-    res.status(401).json({ message: "Sai tài khoản hoặc mật khẩu!" });
+    res.status(401).json({ message: "Email hoặc mật khẩu không đúng" });
   }
 });
 
-// ✅ Gắn route cho /users (từ database.json)
-server.use("/users", userRouter);
+// ✅ Gắn router vào đường dẫn /users (thay vì mặc định /)
+server.use("/users", router);
 
 // ✅ Khởi động server
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log("🚀 Server chạy tại cổng " + PORT);
+server.listen(process.env.PORT || 3000, () => {
+  console.log("✅ JSON Server đang chạy.");
 });
