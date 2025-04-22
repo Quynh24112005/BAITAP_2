@@ -18,34 +18,29 @@ formLogin.addEventListener("submit", function (e) {
 
 async function login(emailValue, passwordValue) {
   try {
-    const response = await fetch("https://68073dede81df7060eb95763.mockapi.io/api/users");
-    
+    const response = await fetch("https://learning.oapi.vn/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        grantType: "Bearer",
+        username: emailValue,
+        password: passwordValue
+      })
+    });
+
+    const data = await response.json();
+
     if (!response.ok) {
-      throw new Error("Không thể kết nối đến server");
-    }
-
-    const users = await response.json();
-
-    if (!Array.isArray(users)) {
-      throw new Error("Dữ liệu người dùng không hợp lệ");
-    }
-
-    const user = users.find(
-      (user) => user.email === emailValue && user.password === passwordValue
-    );
-
-    if (!user) {
-      alert("Sai tên đăng nhập hoặc mật khẩu");
+      const message = data?.message || "Đăng nhập thất bại!";
+      alert(message);
       return;
     }
 
-    const result = {
-      grantType: "Bearer",
-      user: user
-    };
-
+    // Lưu token và user nếu cần
     localStorage.setItem("isLoggedIn", "true");
-    localStorage.setItem("userLogin", JSON.stringify(result));
+    localStorage.setItem("userLogin", JSON.stringify(data));
 
     alert("Đăng nhập thành công!");
     window.location.href = "index.html";

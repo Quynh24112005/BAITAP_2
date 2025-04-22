@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if(btnLogout){
         btnLogout.addEventListener("click", () => {
             localStorage.removeItem("isLoggedIn");
-            localStorage.removeItem("userLocal");
+            localStorage.removeItem("userLogin");
             window.location.href = "login.html";
         })
     }

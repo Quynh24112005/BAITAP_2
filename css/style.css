@@ -579,7 +579,7 @@ body {
     cursor: pointer;
 }
 
-.active, .dot:hover {
+.dot:hover {
     background: #F8881F;
 }
 
