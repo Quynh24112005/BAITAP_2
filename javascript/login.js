@@ -27,7 +27,7 @@ formLogin.addEventListener("submit",function(e){
 
 async function login(emailValue,passwordValue) {
     try{
-        const response = await fetch("https://baitap-2-1.onrender.com/user");
+        const response = await fetch("https://baitap-2-l2nj.onrender.com/login");
         const users = await response.json();
 
         const findUser = users.find((user) => user.email === emailValue.value 

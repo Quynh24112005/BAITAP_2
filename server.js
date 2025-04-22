@@ -3,7 +3,7 @@ const path = require("path"); // ✅ Thêm dòng này
 const server = jsonServer.create();
 
 // ✅ Dùng đường dẫn tuyệt đối để đảm bảo đúng file JSON
-const router = jsonServer.router(path.join(__dirname, "database.json"));
+const router = jsonServer.router(path.join(__dirname, "./database.json"));
 const middlewares = jsonServer.defaults();
 
 server.use(jsonServer.bodyParser);
