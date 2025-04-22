@@ -27,7 +27,7 @@ server.post("/login", (req, res) => {
 });
 
 // Mount router mặc định (các API CRUD tự động)
-server.use(router);
+server.use("/users",router);
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
